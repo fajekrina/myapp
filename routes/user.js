@@ -9,7 +9,7 @@ const v = new Validator();
 router.post('/', async (req, res) => {
     const schema = {
         name: 'string',
-        phone: 'string|min:11|unique'
+        phone: 'string|min:11'
     }
 
     const validate = v.validate(req.body, schema);
@@ -23,7 +23,6 @@ router.post('/', async (req, res) => {
     const user = await User.create(req.body);
 
     res.status(200).send(user);
-    res.status(200).send('Data created successfully');
 });
 
 router.put('/:id', (req, res) => {

@@ -1,5 +1,12 @@
 require('dotenv').config();
 
+// mongose
+//   .connect(process.env.MONGO_URI, {
+//     useNewUrlParser: true
+//   })
+//   .then(() => console.log("DB Connected"))
+//   .catch(err => console.error(err));
+
 const {
   DB_USERNAME,
   DB_PASSWORD,

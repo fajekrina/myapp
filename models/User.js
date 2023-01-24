@@ -12,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         phone: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
         createdAt: {
             type: DataTypes.DATE,
